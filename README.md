@@ -1,0 +1,5 @@
+```
+export OPENAI_API_KEY="<YOUR_TOKEN>"
+export OPENAI_API_URL="<OPENAI_ENDPOINT>"
+export OPENAI_MODEL="<MODEL_NAME>"
+```
