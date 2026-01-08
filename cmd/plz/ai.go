@@ -30,13 +30,13 @@ type Choice struct {
 }
 
 func getCommandFromOpenAI(description string) (string, error) {
-	apiKey := getEnvWithDefault("OPENAI_API_KEY", "")
+	apiKey := getEnvWithDefault("PLZ_API_KEY", "")
 	if apiKey == "" {
-		return "", fmt.Errorf("OPENAI_API_KEY environment variable is not set")
+		return "", fmt.Errorf("PLZ_API_KEY environment variable is not set")
 	}
 
-	apiURL := getEnvWithDefault("OPENAI_API_URL", "https://api.openai.com/v1/chat/completions")
-	model := getEnvWithDefault("OPENAI_MODEL", "gpt-3.5-turbo")
+	apiURL := getEnvWithDefault("PLZ_ENDPOINT", "https://api.openai.com/v1/chat/completions")
+	model := getEnvWithDefault("PLZ_MODEL", "gpt-3.5-turbo")
 
 	// Get session history for context
 	history := loadSessionHistory()
